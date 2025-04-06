@@ -10,7 +10,7 @@ Project consists in: <br>
 - Creating two VMs, one server and one client on a network with two subnets 
 - Using PowerShell to Install ACDC and a Forest
 - Joining a computer to the domain
-- Create a new user and login with it through the client machine
+- Create a new user and log in with it through the client machine
 <h2>Environments and Technologies Used</h2>
 
 - <b>Microsoft Azure</b> 
@@ -102,17 +102,28 @@ Now, returning to the client machine, we will configure its IPv4 settings. This 
 
 
 
-We’re now ready to join the domain. In System Properties, under the Computer Name tab, we’ll click ‘Change,’ select ‘Domain,’ and enter **Labdomain.loc**. We need credentials that have the permission to join the domain, so in this case we will use our administrator account from the Server machine. We will reboot the machine after. Excellent! The server will now be able to see this client Computer.<br/> <br>
+We’re now ready to join the domain. In System Properties, under the Computer Name tab, we’ll click *Change*, select ‘Domain,’ and enter **Labdomain.loc**. We need credentials that have the permission to join the domain, so in this case we will use our administrator account from the Server machine. We will reboot the machine after. Excellent! The server will now be able to see this client Computer.<br/> <br>
 <p align="center">
-<img src="https://imgur.com/Crlzbk5.png" height="40%" width="40%" /><img src="https://imgur.com/eSDVpvO.png" height="40%" width="40%" /><img src="https://imgur.com/SLF0zBt.png" height="40%" width="40%" /><img src="https://imgur.com/IbBPGcP.png" height="80%" width="80%" />
+<img src="https://imgur.com/Crlzbk5.png" height="40%" width="40%" /><img src="https://imgur.com/eSDVpvO.png" height="40%" width="40%" /><img src="https://imgur.com/SLF0zBt.png" height="40%" width="40%" /><img src="https://imgur.com/VEoEEUB.png" height="80%" width="80%" />
 </p>
 <br />
 <br />
 
+In the final stage of our project, after restarting, we’ll log in with our Server Admin account and add Jimmy to the Remote Desktop Users group, allowing us to log through him remotely. We'll open Computer Management and navigate to *Local Users and Groups* > *Groups* > *Remote Desktop Users*. Then, click *Add*, search for Jimmy (the user we created in the domain), and click *OK* > *Apply* > *OK*. Finally, we'll sign out and attempt to log back in using Jimmy's account.<br/> <br>
+<p align="center">
+<img src="https://imgur.com/RL1lFIq.png" height="40%" width="40%" /><img src="https://imgur.com/wxOokOL.png" height="80%" width="80%" /><img src="https://imgur.com/gorMkr0.png" height="80%" width="80%" /><img src="https://imgur.com/EZWMn1N.png" height="80%" width="80%" />
+</p>
+<br />
+<br />
 
+Wonderful! As you can see, we successfully logged in remotely using Jimmy from the Labuser machine. This marks the completion of our domain setup — everything is up and running smoothly. 🚀<br/><br>
+<p align="center">
+<img src="https://imgur.com/vu0lbTm.png" height="40%" width="40%" /><img src="https://imgur.com/meT6j2P.png" height="80%" width="80%" /><img src="https://imgur.com/MAPR82K.png" height="80%" width="80%" />
+</p>
+<br />
+<br />
 
-
- 
+**THE END**
  <!--
  ```diff
 - text in red
