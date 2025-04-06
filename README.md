@@ -1,9 +1,10 @@
 <h1>Active DIrectory Lab</h1>
 
+<p align="center">
 <img src="https://valto.co.uk/wp-content/uploads/2023/05/microsoft-azure-1.png" height="50%" width="50%"/>
 
 <h2>Description</h2>
-Project consists of a simple PowerShell script that walks the user through "zeroing out" (wiping) any drives that are connected to the system. The utility allows you to select the target disk and choose the number of passes that are performed. The PowerShell script will configure a diskpart script file based on the user's selections and then launch Diskpart to perform the disk sanitization.
+Project consists in: Creating two VMs, one server and one client, a network with two subnets 
 <br />
 
 
