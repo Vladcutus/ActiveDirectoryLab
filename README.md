@@ -4,18 +4,24 @@
 <img src="https://valto.co.uk/wp-content/uploads/2023/05/microsoft-azure-1.png" height="50%" width="50%"/>
 
 <h2>Description</h2>
-Project consists in: Creating two VMs, one server and one client, a network with two subnets 
-<br />
 
+Project consists in: <br> 
 
-<h2>Languages and Utilities Used</h2>
+- Creating two VMs, one server and one client, a network with two subnets 
+- Using PowerShell to Install ACDC and a Forest
+- Joining a computer to the domain
+- Create a new user and login with it through the client machine
+<h2>Environments and Technologies Used</h2>
 
+- <b>Microsoft Azure</b> 
+- <b>Remote Desktop</b>
 - <b>PowerShell</b> 
-- <b>Diskpart</b>
+- <b>Active Directory Domain Services</b>
 
-<h2>Environments Used </h2>
+<h2>Operating Systems used </h2>
 
-- <b>Windows 10</b> (21H2)
+- <b>Windows Server 2022</b>
+- <b>Windows 10</b> (22H2)
 
 <h2>Program walk-through:</h2>
 
