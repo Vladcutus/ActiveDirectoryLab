@@ -75,19 +75,43 @@ Next, we'll configure the IP settings on the Server machine and set the DNS serv
 </p>
 <br />
 <br />
-At this stage, we’ll open an elevated PowerShell and we will use the command **Install-WindowsFeature AD-Domain-Services -IncludeManagementTools** to install Active Directory Domain Services and set up a new forest. <br/><br>
+
+
+At this stage, we’ll go on the Server machine, open an elevated PowerShell and we will use the command **Install-WindowsFeature AD-Domain-Services -IncludeManagementTools** to install Active Directory Domain Services. And then we will use **Install-ADDSForest -DomainName Labdomain.loc -InstallDNS** to set up a new forest. As you see we named our domain **Labdomain.loc". Once these steps are completed, we will reboot the system and log back in. Afterward, we can run the **Get-ADDomain** command to verify that our new domain has been successfully created. Additionally, we can confirm its presence in Active Directory Users and Computers.<br/><br>
 <p align="center">
-<img src="https://imgur.com/FYyEF6R.png" height="80%" width="80%" /><img src="https://imgur.com/3MLi6Yb.png" height="80%" width="80%" /><img src="https://imgur.com/IE21nLp.png" height="80%" width="80%" /><img src="https://imgur.com/bz6NnBn.png" height="80%" width="80%" />
+<img src="https://imgur.com/FYyEF6R.png" height="80%" width="80%" /><img src="https://imgur.com/3MLi6Yb.png" height="80%" width="80%" /><img src="https://imgur.com/IE21nLp.png" height="80%" width="80%" /><img src="https://imgur.com/RqAkBxL.png" height="80%" width="80%" /><img src="https://imgur.com/Dmo7KvE.png" height="80%" width="80%" />
+</p>
+
+
+<br />
+<br />
+ 
+Before we move to the client machine we will create a new user named Jimmy. <br/><br>
+<p align="center">
+<img src="https://imgur.com/bLbF68X.png" height="80%" width="80%" /><img src="https://imgur.com/76eDBgZ.png" height="40%" width="40%" />
 </p>
 <br />
 <br />
- 
- 
- 
- 
- 
- 
- 
+
+Now, returning to the client machine, we will configure its IPv4 settings. This machine will continue to receive its private IP via DHCP, but we have to change its DNS server IP address to point to the right DNS server in order to find the domain (192.168.0.5). To confirm everything is working, we’ll ping Labdomain.loc, and it should respond with the Domain Controller's IP address like in the image below. <br/><br>
+<p align="center"> 
+<img src="https://imgur.com/4NXP4bp.png" height="40%" width="40%" /><img src="https://imgur.com/KDewTdv.png" height="80%" width="80%" />
+</p>
+<br />
+<br />
+
+
+
+We’re now ready to join the domain. In System Properties, under the Computer Name tab, we’ll click ‘Change,’ select ‘Domain,’ and enter **Labdomain.loc**. We need credentials that have the permission to join the domain, so in this case we will use our administrator account from the Server machine. We will reboot the machine after. Excellent! The server will now be able to see this client Computer.<br/> <br>
+<p align="center">
+<img src="https://imgur.com/Crlzbk5.png" height="40%" width="40%" /><img src="https://imgur.com/eSDVpvO.png" height="40%" width="40%" /><img src="https://imgur.com/SLF0zBt.png" height="40%" width="40%" /><img src="https://imgur.com/IbBPGcP.png" height="80%" width="80%" />
+</p>
+<br />
+<br />
+
+
+
+
  
  <!--
  ```diff
