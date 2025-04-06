@@ -7,7 +7,7 @@
 
 Project consists in: <br> 
 
-- Creating two VMs, one server and one client, a network with two subnets 
+- Creating two VMs, one server and one client on a network with two subnets 
 - Using PowerShell to Install ACDC and a Forest
 - Joining a computer to the domain
 - Create a new user and login with it through the client machine
@@ -23,11 +23,13 @@ Project consists in: <br>
 - <b>Windows Server 2022</b>
 - <b>Windows 10</b> (22H2)
 
-<h2>Program walk-through:</h2>
+<h2>Deployment and configuring walk-through:</h2>
 
-<p align="center">
-Launch the utility: <br/>
-<img src="https://i.imgur.com/62TgaWL.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
+First we are starting with the creation of our network named Labnetwork with an address range of 192.168.0.0/23 which will give our network a total of 512 addresses. We will split our network in 2 subnets. The first range 192.168.0.0/24 will be dedicated to the servers and the other one 192.168.1.0/24 to the hosts.<br/>
+ <br/> 
+ <p align="center">
+<img src="https://imgur.com/TL5wJEZ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 <br />
 <br />
 Select the disk:  <br/>
